@@ -1,0 +1,14 @@
+sqlserver top 分页
+mysql limit
+oracle rownum
+
+like 用于在where子句中搜索列中的指定模式
+
+通配符：
+% 替代一个或多个字符
+_仅替代一个字符
+
+SELECT * FROM Persons
+WHERE City LIKE '[!ALN]%'
+从上面的 "Persons" 表中选取居住的城市不以 "A" 或 "L" 或 "N" 开头的人
+

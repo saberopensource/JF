@@ -12,3 +12,36 @@ SELECT * FROM Persons
 WHERE City LIKE '[!ALN]%'
 从上面的 "Persons" 表中选取居住的城市不以 "A" 或 "L" 或 "N" 开头的人
 
+in 操作符允许您在where字句中规定多个值
+select 列名 from 表名 where 列名 in (value1，value2，...)
+可以设置多个值
+select 列名 from 表名 where 列名 in (select 列名 from 表名 where ... )
+也可以设置sql语句
+
+between and 操作符用于选取介于两个值之间的数据范围内的值
+SELECT column_name(s)
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
+
+join on:
+    用于把来自两个或多个表的行结合起来
+    INNER JOIN：如果表中有至少一个匹配，则返回行
+    LEFT JOIN：即使右表中没有匹配，也从左表返回所有的行
+    RIGHT JOIN：即使左表中没有匹配，也从右表返回所有的行
+    FULL JOIN：只要其中一个表中存在匹配，则返回行
+inner join:
+    SELECT column_name(s)
+    FROM table1
+    INNER JOIN table2
+     ON table1.column_name=table2.column_name;
+
+UNION :
+    用于合并两个或多个select语句的结果集，默认选取不同的值
+    如果允许重复的值，使用union all
+    SELECT column_name(s) FROM table1
+    UNION (ALL)
+    SELECT column_name(s) FROM table2;
+
+SELECT into：
+    从一个表复制数据，然后把数据插入到另一个新表中
+

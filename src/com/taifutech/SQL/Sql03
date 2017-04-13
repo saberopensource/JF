@@ -1,0 +1,54 @@
+insert into select ：
+从一个表复制数据，然后把数据插入到一个已存在的表中
+INSERT INTO table2 SELECT * FROM table1;
+
+sql 高级语句
+
+drop index ：用于删除表中的索引
+    drop index 索引name；
+drop table ：用于删除表
+    drop table tablename；
+drop database ：用于删除数据库
+    drop database dbname；
+
+truncate table ：删除表中数据 不删除表本身
+    truncate table tablename；
+
+create database ：创建数据库
+   create database dbname；
+
+create table;
+create table tablename(
+    id int
+    name varchar(225)
+);
+
+alter table tablename : 添加列 删除列或者修改列
+    ALTER TABLE table_name
+        ADD column_name datatype
+    ALTER TABLE table_name
+        DROP COLUMN column_name
+    修改数据类型 sqlserver / ms access
+    ALTER TABLE table_name
+        ALTER COLUMN column_name datatype
+        Mysql / oracle
+    ALTER TABLE table_name
+        MODIFY COLUMN column_name datatype
+
+create view ： 视图是可视化的表
+    CREATE VIEW view_name AS
+        SELECT column_name(s)
+        FROM table_name
+        WHERE condition
+        视图总是显示最新的数据！没当用户查询视图时，数据库
+        引擎通过使用视图的sql语句重建数据。
+drop view ： 删除视图
+
+as 别名  列 表 都可以有别名
+别名使用环境： 查询中涉及超过一个表  查询中使用了函数
+                列名称很长或者可读性差   需要把两个列或者多个列结合在一起
+
+unique 约束唯一标识数据库表中的每条记录
+unique 和primary key 约束均为列或列集合提供了唯一性的保证
+
+foreing key : 一个表中的foreing key 指向另一个表中的primary key
